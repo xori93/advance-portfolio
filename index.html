@@ -6,9 +6,19 @@
   <title>Xori Robinson</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/57ec3873aa.js" crossorigin="anonymous"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "lmMb80eEtqgs78bUu",
+      });
+   })();
+</script>
 </head>
 <body>
-  <section id="landing-page">
+  <section id="landing-page" onmousemove="moveBackground(event)">
     <nav>
       <figure>
         <img id="personal-logo" src="./assets/logo.png" alt="">
@@ -28,14 +38,14 @@
           link__hover-effect--black
           ">Projects</a>
         </li>
-        <li class="nav__link">
+        <li class="nav__link" onclick="toggleModal()">
           <a href="#" class="
           nav__link--anchor
           link__hover-effect
           link__hover-effect--black
           ">Contact</a>
         </li>
-        <li class="nav__link click">
+        <li class="nav__link click" onclick="toggleContrast()">
           <a href="#" class="
           nav__link--anchor
           link__hover-effect
@@ -52,7 +62,7 @@
           I'm a <b class="purple">Frontend Software engineer</b> with a strong passion for building web applications with great user 
           experience.
           <br>
-          Here's a bit more <b class="purple">about me</b>
+          Here's a bit more <b class="purple click">about me</b>
         </p>
       </div>
       <div class="social__list">
@@ -61,7 +71,7 @@
         <a href="./assets/Xori Robinson Resume (1).pdf" target="_blank" class="social__link click"><i class="fa-solid fa-file-pdf"></i></a>
       </div>
     </header>
-    <button class="mail__button click">
+    <button class="mail__button click" onclick="toggleModal()">
       <i class="fa-solid fa-envelope"></i>
     </button>
     <a href="#projects" class="scroll">
@@ -100,13 +110,14 @@
         </div>
       </div>
       <div class="modal__half modal__contact">
+        <i class="fa-solid fa-x modal__exit click" onclick="toggleModal()"></i>
         <h3 class="modal__title modal__title--contact">
           Let's have a chat!
         </h3>
         <h4 class="modal__sub-title modal__sub-title--contact">
           I'm currently open to new opportunities.
         </h4>
-        <form id="contact__form" action="">
+        <form id="contact__form" onsubmit="contact(event)">
           <div class="form__item">
             <label class="form__item--label">Name</label>
             <input  class="input" name="user_name" type="text" required></input>
@@ -130,8 +141,17 @@
           Thanks for the message! Looking forward to speaking to you soon.
         </div>
       </div>
-      <i class="fa-solid fa-x modal__exit click"></i>
+      
     </div>
+    <img src="./assets/semi circle.svg" class="shape shape--0">
+    <img src="./assets/circle.svg" class="shape shape--1">
+    <img src="./assets/squiggly.svg" class="shape shape--2">
+    <img src="./assets/circle.svg" class="shape shape--3">
+    <img src="./assets/triangle.svg" class="shape shape--4">
+    <img src="./assets/circle.svg" class="shape shape--5">
+    <img src="./assets/squiggly.svg" class="shape shape--6">
+    <img src="./assets/circle.svg" class="shape shape--7">
+    <img src="./assets/semi circle.svg" class="shape shape--8">
   </section>
 
   <section id="projects">
@@ -179,7 +199,7 @@
       <div class="footer__social--list">
         <a href="https://github.com/xori93" target="_blank" class="
         footer__social--link
-        link__hover--effect
+        link__hover-effect
         link__hover-effect--white
         ">
         GitHub
@@ -194,14 +214,14 @@
       </a>
         <a href="#" class="
         footer__social--link
-        link__hover--effect
+        link__hover-effect
         link__hover-effect--white
         ">
         Email
       </a>
         <a href="./assets/Xori Robinson Resume (1).pdf" target="_blank" class="
         footer__social--link
-        link__hover--effect
+        link__hover-effect
         link__hover-effect--white
         ">
         Resume
@@ -211,5 +231,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
