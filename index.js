@@ -11,7 +11,7 @@ function moveBackground(event) {
     // swope the direct of the movement for the odd shapes
     const isOdd = i % 2 !== 0
     const boolInt = isOdd ? -1 : 1
-    shapes[i].style.transform = `translate(${x * boolInt}, ${y * boolInt})`
+    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt})`
   }
 }
 
