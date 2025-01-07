@@ -2,16 +2,21 @@ let isModalOpen = false
 let contrastToggle = false
 const scaleFactor = 1 / 20
 
+
 function moveBackground(event) {
   const shapes = document.querySelectorAll(".shape")
-  const x = event.clientX * scaleFactor;
-  const y = event.clientY * scaleFactor;
-
-  for ( let i = 0; i < shapes.length; ++1) {
-    // swope the direct of the movement for the odd shapes
-    const isOdd = i % 2 !== 0
+  // lets get the mouse posistion
+  const x = event.clientX * scaleFactor
+  const y = event.clientY * scaleFactor
+  
+  // loop over the shapes
+  for (let i = 0; i < shapes.length; ++i) {
+    // swope the direction of the movment for the odd shapes
+    const isOdd = i % 2 !== 0;
     const boolInt = isOdd ? -1 : 1
-    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt})`
+    // target the specific shapes element
+    // target the style
+    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
   }
 }
 

@@ -24,7 +24,7 @@
         <img id="personal-logo" src="./assets/logo.png" alt="">
       </figure>
       <ul class="nav__link--list">
-        <li class="nav__link">
+        <li class="nav__link" onclick="toggleModal()">
           <a href="#" class="
           nav__link--anchor
           link__hover-effect
@@ -32,7 +32,7 @@
           ">About</a>
         </li>
         <li class="nav__link">
-          <a href="#" class="
+          <a href="#projects" class="
           nav__link--anchor
           link__hover-effect
           link__hover-effect--black
@@ -71,9 +71,10 @@
         <a href="./assets/Xori Robinson Resume (1).pdf" target="_blank" class="social__link click"><i class="fa-solid fa-file-pdf"></i></a>
       </div>
     </header>
-    <button class="mail__button click" onclick="toggleModal()">
-      <i class="fa-solid fa-envelope"></i>
-    </button>
+    <a href="#">
+      <button class="mail__button click" onclick="toggleModal()">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
     <a href="#projects" class="scroll">
       <div class="scroll__icon click"></div>
     </a>
@@ -212,12 +213,12 @@
         ">
         Linkedin
       </a>
-        <a href="#" class="
+        <a href="#" onclick="toggleModal()" class="
         footer__social--link
         link__hover-effect
         link__hover-effect--white
         ">
-        Email
+        Contact
       </a>
         <a href="./assets/Xori Robinson Resume (1).pdf" target="_blank" class="
         footer__social--link
