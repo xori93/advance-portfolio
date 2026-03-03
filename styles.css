@@ -525,6 +525,8 @@ PROJECTS
   border-radius: 20px;
   box-shadow: 0 20px 80px 0 rbg(0, 0, 0, 0.45);
   overflow: hidden;
+  margin-bottom: 16px;
+
 }
 
 .project__wrapper:hover .project__description {
